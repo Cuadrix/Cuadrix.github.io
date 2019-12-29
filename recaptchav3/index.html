@@ -1,1 +1,17 @@
-hello
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>reCaptcha v3</title>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LeyvMoUAAAAAD69b8fxDdEGdH5TQ9ktC6yFbODC"></script>
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LeyvMoUAAAAAD69b8fxDdEGdH5TQ9ktC6yFbODC', {action: 'homepage'}).then(function(token) {
+                    window.console.log(token);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Some text</h1>
+    </body>
+</html>

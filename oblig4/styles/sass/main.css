@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  #article {
+    background-color: #212121;
+  }
+  #article main {
+    color: #e0e0e0;
+    background-color: #333;
+    border-color: #4d4d4d;
+  }
+  #article main article code {
+    background-color: #4d4d4d;
+  }
+  #article footer {
+    color: #e0e0e0;
+    background-color: #333;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

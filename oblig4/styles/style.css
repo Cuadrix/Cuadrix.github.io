@@ -1,0 +1,270 @@
+/*** Global ***/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "aside main"
+        "footer footer";
+    font-size: 15px;
+    word-wrap: break-word;
+    background-color: lightgray;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 5px 30px;
+    color: white;
+    background-image: url("../images/bg.png");
+    border-radius: 10px 10px 0 0;
+    grid-area: header;
+}
+
+/* Desktop navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    grid-area: nav;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+nav a:hover {
+    color: skyblue;
+    background-color: black;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#nav .toggle {
+    display: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Mobil navbar */
+#nav-mobile {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    overflow-y: auto;
+    border-radius: 0;
+    background-color: #333;
+}
+
+#nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#nav-mobile ul li {
+    width: inherit;
+}
+
+#nav-mobile ul li a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#nav-mobile .toggle {
+    align-self: flex-end;
+    order: -1;
+    width: fit-content;
+}
+
+#nav-mobile .toggle a {
+    font-size: 25px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bababa;;
+    border-radius: 10px;
+    color: black;
+    height: 80px;
+    padding: 5px 15px;
+    grid-area: footer;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+/* Individual */
+.iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%
+}
+
+/*** Body av index ***/
+#index aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    border: 1px solid #bababa;
+    border-radius: 10px;
+    color: black;
+    height: fit-content;
+    margin: 30px 0;
+    grid-area: aside;
+}
+
+#index aside .embed {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+#index aside .embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#index aside .message {
+    padding: 15px;
+}
+
+#index aside .message * {
+    padding-bottom: 10px;
+}
+
+#index aside .message .button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#index aside .message .button:hover {
+    background-color: black;
+}
+
+#index aside ul li {
+    margin: 0 15px;
+}
+
+#index main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 15px;
+    grid-area: main;
+}
+
+#index main article {
+    width: 40%;
+    height: fit-content;
+    margin: 15px;
+    background-color: #e0e0e0;
+    border: 1px solid #bababa;
+    border-radius: 10px;
+}
+
+#index main article:hover {
+    box-shadow: 1px 1px 4px grey;
+}
+
+#index main article a {
+    display: block;
+    height: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+#index main article img {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+#index main article p {
+    max-height: 50px;
+    overflow: hidden;
+}
+
+#index main article .info {
+    padding: 15px;
+}
+
+#index main article .info * {
+    margin-bottom: 10px;
+}
+
+/*** Media queries ***/
+@media (max-width: 768px) {
+    #nav .items {
+        display: none;
+    }
+    #nav .toggle {
+        display: inherit;
+    }
+    #index {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+}
+
+@media (max-width: 500px) {
+    #index main article {
+        width: 100%;
+    }
+}

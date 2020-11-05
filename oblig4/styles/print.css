@@ -1,0 +1,18 @@
+#article :nth-child(1n) {
+    border: unset;
+    border-radius: unset;
+    break-inside: avoid;
+}
+
+#article > :not(main) {
+    display: none;
+}
+
+#article main {
+    display: block;
+    margin: unset;
+}
+
+#article main article {
+    display: block;
+}

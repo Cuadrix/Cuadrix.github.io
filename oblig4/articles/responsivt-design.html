@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsivt Design</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/article.css">
+        <link rel="stylesheet" media="print" href="../styles/print.css">
+    </head>
+    <body id="article">
+        <header>
+            <h1>Oblig 3</h1>
+        </header>
+        <nav id="nav">
+            <ul class="about">
+                <li><a href="../index.html">Hjem</a></li>
+            </ul>
+            <ul class="items">
+                <li><a href="html-skjemaer.html">HTML-skjemaer</a></li>
+                <li><a href="media-typer.html">Media Typer</a></li>
+                <li><a href="css-layouts.html">CSS Layouts</a></li>
+                <li><a href="video-audio.html">Video og Audio</a></li>
+                <li><a href="responsivt-design.html">Responsivt Design</a></li>
+                <li><a href="sass-css.html">Sass CSS</a></li>
+                <li><a href="seo.html">SEO</a></li>
+            </ul>
+            <ul class="toggle">
+                <li><a href="javascript:void(0)" onclick="openNav()">&#9776;</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>Responsivt Design</h1>
+                <figure>
+                    <img src="../images/responsivt-design/cover.png" alt="Responsivt design cover">
+                    <figcaption>Illustrativ cover</figcaption>
+                </figure>
+                <h3>Hva er det?</h3>
+                <p>
+                    Responsivt design er et design teknikk innenfor web design som går 
+                    an på å designe flexible nettsider som fungerer på flere enheter og skjerm størrelser.
+                    Det betyr at et responsivt designed nettside skal fungere like godt på PC skjermen som mobilen.
+                </p>
+                <h3>Relativ størrelser</h3>
+                <p>
+                    Relative størrelser på elementer er basisen for flexible of responsive nettsider.
+                    Det gjør at at siden justerer seg selv relativt til containeren eller skjerm størrelsen.
+                </p>
+                <figure>
+                    <img src="../images/responsivt-design/relativ.png" alt="Relativ illustration">
+                    <figcaption>Bokser med relativ størrelse</figcaption>
+                </figure>
+                <p>
+                    Boksene ovenfor kommer til å ha de samme relative størrelsene både på en 
+                    liten mobil skjerm og en stor PC skjerm. Dette er fordi 30% vil alltid 
+                    spise opp 30% av pikslene både på et lite skjerm og et stort skjerm.
+                    Det samme gjelder for text, bilde og video elementer.
+                </p>
+                <p>
+                    For å definere relative størrelser for elementer, bruker vi inbyggde 
+                    relative målenheter som CSS tilbyr oss.
+                    Disse kan man finne informasjon om på 
+                    <a href="https://www.w3schools.com/cssref/css_units.asp">W3Schools</a> eller 
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">MDN</a>.
+                    Ellers kan man bruke CSS Grid og Flexbox for enda mere flexibilitet.
+                </p>
+                <p>
+                    Når det er sagt, er det bare så mye vi kan gjøre med relative størrelser. 
+                    Hva om vi vil flytte ned noen elementer når skjermen er liten? 
+                    Hva om vi vil omorganisere layouten av nettsiden når skjermen er stor? 
+                    Det er her Media Queries kommer inn.
+                </p>
+                <h3>Media Queries</h3>
+                <p>
+                    Media Queries er en ekstensjon av den eldre <code>@media</code> regelen.
+                    Den lar oss lage CSS regler som er avhengig av Media Typen og skjerm størrelsen (Nytt i CSS3).
+                </p>
+                <p>
+                    Før Media Queries kunne man bare sjekke Media Typen av enheter 
+                    for å tildele spesifiserte stilark eller regler.
+                </p>
+                <p>
+                    Siden Media Queries lar oss definere CSS egenskaper avhengig av 
+                    skjerm størrelse, kan dette brukes til å omorganisere elementer 
+                    når skjermen har en bestemt størrelse. Disse reglene er ofte kalt <b>breakpoints</b>.
+                </p>
+                <p>
+                    For å lage en breakpoint avhengig av skjerm størrelsen gjør vi dette;
+                </p>
+                <ol>
+                    <li>Bruker nøkkelordet <code>@media</code> til å spesifisere en regel avhengig av Media Type</li>
+                    <li>Velger <code>screen</code> som Media Type og <code>and</code> til å ha med skjerm størrelsen på regelen</li>
+                    <li><code>(max-width: 480px)</code> Da setter vi størrelsen av skjermen i piksler for når vi vil innføre vår breakpoint (påfør ny CSS)</li>
+                </ol>
+                <figure>
+                    <img src="../images/responsivt-design/breakpoint.png" alt="Breakpoint skjerm">
+                    <figcaption>Breakpoint etter når skjermen blir mindre enn 480px</figcaption>
+                </figure>
+                <p>
+                    Dette vil sette bakgrunnsfarget av <code>&lt;body&gt;</code> 
+                    til lys grønn hvis/når skjermen er mindre enn 480px.
+                </p>
+                <p>
+                    Når vi kombinerer dette med relative boks størrelser, 
+                    blir det en veldig kraftig verktøy til å lage responsive nettsider.
+                </p>
+            </article>
+        </main>
+        <footer>
+            <address>
+                <ul>
+                    <li>&#169 2020 Jasin Elguemri</li>
+                    <li>Epost: jasinelguemri@gmail.com</li>
+                </ul>
+            </address>
+        </footer>
+        <script src="../scripts/nav.js"></script>
+    </body>
+</html>

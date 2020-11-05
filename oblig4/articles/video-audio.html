@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video og Audio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/article.css">
+        <link rel="stylesheet" media="print" href="../styles/print.css">
+    </head>
+    <body id="article">
+        <header>
+            <h1>Oblig 3</h1>
+        </header>
+        <nav id="nav">
+            <ul class="about">
+                <li><a href="../index.html">Hjem</a></li>
+            </ul>
+            <ul class="items">
+                <li><a href="html-skjemaer.html">HTML-skjemaer</a></li>
+                <li><a href="media-typer.html">Media Typer</a></li>
+                <li><a href="css-layouts.html">CSS Layouts</a></li>
+                <li><a href="video-audio.html">Video og Audio</a></li>
+                <li><a href="responsivt-design.html">Responsivt Design</a></li>
+                <li><a href="sass-css.html">Sass CSS</a></li>
+                <li><a href="seo.html">SEO</a></li>
+            </ul>
+            <ul class="toggle">
+                <li><a href="javascript:void(0)" onclick="openNav()">&#9776;</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>Video og Audio</h1>
+                <figure>
+                    <img src="../images/video-audio/cover.png" alt="Video og audio cover">
+                    <figcaption>Illustrativ cover</figcaption>
+                </figure>
+                <h3>Historie</h3>
+                <p>
+                    Før HTML5 var det ikke noen native HTML måte å legge videoer og audio på nå nettsiden.
+                    I stedet ble det brukt forskjellige plugins støttet av nettleseren for å få til denne effekten.
+                    De to mest populære av dem var <b>Adobe Flash</b> og <b>Silverlight</b>.
+                </p>
+                <p>
+                    Nå har Flash og Silverlight nesten dødd på nettleseren etter introdusering av HTML5's 
+                    <code>&lt;video&gt;</code> og <code>&lt;audio&gt;</code> taggene, og i 2017 
+                    annonserte Adobe at Flash vil ikke lenger bli støttet etter 2020.
+                    Rett og slett var det ikke lenger behov for 3rd-party plugins når 
+                    native måter til å gjøre det samme var tilgjengelige.
+                </p>
+                <h3>HTML5 Video</h3>
+                <p>
+                    Å legge videoer på en nettside er like lett som å legge inn bilder.
+                    Som nevnt, HTML5 kommer med <code>&lt;video&gt;</code> taggen.
+                    Denne taggen bruker vi til å peke på video filen og spesifisere video spillerens kontrollene.
+                </p>
+                <p>
+                    Får å velge videoen som skal vises, kan vi bruke enten <code>src</code> attributet 
+                    eller <code>&lt;source&gt;</code> taggen.
+                </p>
+                <figure>
+                    <img src="../images/video-audio/video-source.png" alt="Video source tag kode">
+                    <figcaption>Video med source tag</figcaption>
+                </figure>
+                <p>
+                    Koden øverst skal da lage en video spiller med gitte dimensjoner på nettsiden.
+                </p>
+                <p>
+                    For å kontrollere denne video spilleren har vi flere andre attributer også. 
+                    Disse er alle de gyldige attributene til <code>&lt;video&gt;</code> taggen;
+                </p>
+                <ul>
+                    <li><code>autoplay</code> - Spesifiserer at videoen skal spilles av så snart den er klar</li>
+                    <li><code>controls</code> - Spesifiserer at videokontroller skal vises (play/pause-knapp etc.).</li>
+                    <li><code>loop</code> - Spesifiserer at videoen vil starte på nytt hver gang den er ferdig</li>
+                    <li><code>muted</code> - Spesifiserer at lydutgangen til videoen skal dempes</li>
+                    <li><code>poster</code> - Spesifiserer et bilde som skal vises mens videoen lastes ned</li>
+                    <li><code>preload</code> - Spesifiserer om og hvordan videoen skal lastes inn når siden lastes inn</li>
+                    <li><code>width</code> - Angir bredden på videospilleren</li>
+                    <li><code>height</code> - Angir høyden på videospilleren</li>
+                    <li><code>src</code> - Spesifiserer URL-en til videofilen</li>
+                </ul>
+                <h3>HTML5 Audio</h3>
+                <p>
+                    Audio kan legges på nettsiden på samme måte som video.
+                    Den eneste forskjellen er at bare spilleren blir legget til nettsiden.
+                </p>
+                <figure>
+                    <img src="../images/video-audio/audio-player.png" alt="Audio spiller">
+                    <figcaption>Bare audio spiller</figcaption>
+                </figure>
+                <p>
+                    Bortsett fra <code>width</code>, <code>height</code> og <code>poster</code>, er 
+                    alle de andre attributene akkurat det samme som på video taggen.
+                </p>
+                <h3>Responsiv embed eksempel</h3>
+                <div class=iframe>
+                    <iframe src="https://www.youtube.com/embed/yY6XnbWnK4o" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <address>
+                <ul>
+                    <li>&#169 2020 Jasin Elguemri</li>
+                    <li>Epost: jasinelguemri@gmail.com</li>
+                </ul>
+            </address>
+        </footer>
+        <script src="../scripts/nav.js"></script>
+    </body>
+</html>

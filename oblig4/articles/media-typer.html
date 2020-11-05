@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media typer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/article.css">
+        <link rel="stylesheet" media="print" href="../styles/print.css">
+    </head>
+    <body id="article">
+        <header>
+            <h1>Oblig 3</h1>
+        </header>
+        <nav id="nav">
+            <ul class="about">
+                <li><a href="../index.html">Hjem</a></li>
+            </ul>
+            <ul class="items">
+                <li><a href="html-skjemaer.html">HTML-skjemaer</a></li>
+                <li><a href="media-typer.html">Media Typer</a></li>
+                <li><a href="css-layouts.html">CSS Layouts</a></li>
+                <li><a href="video-audio.html">Video og Audio</a></li>
+                <li><a href="responsivt-design.html">Responsivt Design</a></li>
+                <li><a href="sass-css.html">Sass CSS</a></li>
+                <li><a href="seo.html">SEO</a></li>
+            </ul>
+            <ul class="toggle">
+                <li><a href="javascript:void(0)" onclick="openNav()">&#9776;</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h1>Media typer</h1>
+                <figure>
+                    <img src="../images/media-typer/cover.png" alt="Media cover">
+                    <figcaption>Illustrativ cover</figcaption>
+                </figure>
+                <h3>Hva er medie typer?</h3>
+                <p>
+                    I CSS er det mulig å bruke forskjellige stil avhengig av enheten.
+                    Disse enhetene er medie typer. Hvilken stil skal brukes med hvilken medietype kan spesifiseres
+                    direkte på HTML filen via <code>media</code> attributet eller via CSS regelen <code>@media</code>.
+                </p>
+                <figure>
+                    <img src="../images/media-typer/code.png" alt="Code example">
+                    <figcaption>Media attribute eksempel</figcaption>
+                </figure>
+                <p>
+                    Det finnes flere media typer, men bare 3 av dem er aktuelle i dag takket være responsiv design;
+                </p>
+                <ul>
+                    <li><code>screen</code> - Standarden. Brukes til dataskjermer, nettbrett, smarttelefoner etc.</li>
+                    <li><code>print</code> - Brukes til skrivere/printere</li>
+                    <li><code>speech</code> - Brukes til skjermlesere som "leser" siden høyt</li>
+                </ul>
+            </article>
+        </main>
+        <footer>
+            <address>
+                <ul>
+                    <li>&#169 2020 Jasin Elguemri</li>
+                    <li>Epost: jasinelguemri@gmail.com</li>
+                </ul>
+            </address>
+        </footer>
+        <script src="../scripts/nav.js"></script>
+    </body>
+</html>

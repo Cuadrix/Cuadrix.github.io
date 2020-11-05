@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SEO - Viktighet og Implementasjon | Oblig 3</title>
+        <title>SEO viktighet og Implementasjon | Oblig 4</title>
         <meta charset="utf-8">
+        <meta name="description" content="Hva er SEO? SEO (Search Engine Optimization) brukes til å rangere nettsider høyere på søke resultater.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/article.css">
@@ -10,7 +11,7 @@
     </head>
     <body id="article">
         <header>
-            <h1>Oblig 3</h1>
+            <h1>Oblig 4</h1>
         </header>
         <nav id="nav">
             <ul class="about">
@@ -33,27 +34,27 @@
             <article>
                 <h1>SEO Viktighet og Implementasjon</h1>
                 <figure>
-                    <img src="../images/seo/cover.png" alt="SEO article cover">
-                    <figcaption>Figure - Placeholder</figcaption>
+                    <img src="../images/seo/cover.webp" alt="SEO article cover">
+                    <figcaption>SEO article cover</figcaption>
                 </figure>
-                <h3>Hva er SEO?</h3>
+                <h2>Hva er SEO?</h2>
                 <p>
                     SEO(Search Engine Optimization) er aktiviteter som utviklere gjør til å optimisere nettsider for 
                     <b>Web Crawlere</b> av forskjellige søkemotorer.
                 </p>
                 <p>
                     Det er altså aktiviteter som gjøres av utviklere med mål om at 
-                    Web Crawlere får med seg nødvendig informasjon av nettsiden som 
+                    Web Crawlere får med seg nødvendig informasjon fra nettsiden som 
                     kan brukes til å indexere det(lagre til søkemotorens database) 
                     sånn at det blir rangert så høyt som mulig på søke resultater.
                 </p>
                 <figure>
-                    <img src="../images/seo/web-crawler.png" alt="Web Crawler spider">
+                    <img src="../images/seo/web-crawler.webp" alt="Web Crawler spider">
                     <figcaption>Web Crawler analyserer nettsider for indexing</figcaption>
                 </figure>
                 <p>
                     Derfor er semantiske HTML tagger viktige. Web Crawlere kan forstå 
-                    dem bedre en generiske <code>&lt;div&gt;</code> tagger som ikke har noe semantisk mening.
+                    dem bedre enn generiske <code>&lt;div&gt;</code> tagger som ikke har noe semantisk mening.
                     Så lenge kode spesifikasjonen for semantiske tagger er følgt, tar Web Crawlere det for gitt at taggene 
                     er brukt til det de er ment å brukes for. Dette gir Web Crawleren en generell ide av 
                     nettsidens struktur og innhold som hjelper med indexing av nettsiden på søkemotorens databaser.
@@ -62,23 +63,48 @@
                     Hva slags aktiviteter som kan gjøres for å optimisere en nettside 
                     er avhengig av søkemotoren og dems rettning med oppdateringer.
                     Uansett av dette er det noen generelle ting som vi kan alltid gjøre;
-                    På denne artikkelen skal jeg bruke spesifikasjonen nedenfor til å optimisere 
-                    dette nettstedet;
                 </p>
-                <ul>
+                <ol>
                     <li>Bruk semantiske tagger</li>
                     <li>Bruk passende nøkkel ord i innholdet</li>
                     <li>Bruk beskrivende side titler</li>
                     <li>Bruk <code>&lt;meta&gt;</code> deskripsjon tag</li>
                     <li>Fjerne alle døde lenker</li>
-                    <li>Innholdet skal være text for: [kode eksempler]</li>
+                    <li>Optimiser hastigheten av nettstedet</li>
                     <li>Ha med deskripsjoner for media (f.ex. <code>alt</code> attribut)</li>
                     <li>Ha med en <b>sitemap.xml</b> på rooten av nettstedet</li>
-                </ul>
-                <h3>Implementasjon av SEO på dette nettstedet</h3>
+                </ol>
+                <h2>Implementasjon av SEO på denne nettsiden</h2>
+                <h3>Google Lighthouse</h3>
+                <figure>
+                    <img src="../images/seo/meta-tag-lighthouse.webp" alt="Må bruke meta tag">
+                    <figcaption>Meta tag finnes ikke</figcaption>
+                </figure>
                 <p>
-
+                    Dette ble løst ved å legge til <code>&lt;meta name="description" content="..."&gt;</code> 
+                    på <code>&lt;head&gt;</code> taggen. Nå kan søkemotorer forhåpentligvis finne nettsiden 
+                    lettere hvis nøkkelordene matcher med ord fra deskripsjonen.
                 </p>
+                <h3>PageSpeed Insights</h3>
+                <figure>
+                    <img src="../images/seo/nextgen-img-pagespeed.webp" alt="Bruk nye bilde formater">
+                    <figcaption>Optimiser hastigheten ved bruk av nye bilde formater</figcaption>
+                </figure>
+                <p>
+                    Problemet er på grunn av bruket av store <em>.png</em> bilde filer, så den anbefalte 
+                    å bruke nye bildet formater som kan redusere størrelsen av bilder 
+                    og dermed forbedre hastigheten av nettsiden.
+                </p>
+                <p>
+                    Problemet ble løst ved å konvertere <em>.png</em> filene til <em>.webp</em>. 
+                    Dette er en minimalisk optimalisering siden den påvirker ikke så mye SEO. 
+                </p>
+                <h3>Andre optimaliseringer gjort på nettsiden</h3>
+                <ul>
+                    <li>Brukt "SEO" nøkkelordet på <code>&lt;meta&gt;</code> deskripsjon og flere headings</li>
+                    <li>Brukt beskrivende text innenfor <code>alt</code> attributet og <code>&lt;figcaption&gt;</code> taggen</li>
+                    <li>Legget til <em>sitemap.xml</em> på rooten av nettstedet</li>
+                </ul>
             </article>
         </main>
         <footer>

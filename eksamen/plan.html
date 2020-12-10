@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <!-- HTML Meta Tags -->
+        <title>Plan | Eksamen webutvikling</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="plan.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Plan">
+        <meta property="og:description" content="Universell utforming og sosiale medier">
+        <meta property="og:image" content="img/Valgfri/placeholder.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="plan.html">
+        <meta name="twitter:title" content="Sosiale Medier">
+        <meta name="twitter:description" content="Universell utforming og sosiale medier">
+        <meta name="twitter:image" content="img/Valgfri/placeholder.png">
+
+        <!-- Stiler -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>YouzClothing</h1>
+            <h2>Unique clothing store online</h2>
+        </header>
+        <nav>
+            <a href="index.html"><img src="img/logo.png"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="kontakt.html">Contact</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="seo.html">SEO</a></li>
+            </ul>
+        </nav>
+        <main id="plan-seo">
+            <section id="article-section">
+                <article>
+                    <h1>Universell Utforming</h1>
+                    <p>
+                        Universell utforming er viktig for YouzClothes først og fremst fordi de er et firma som selger klær. 
+                        Dette betyr at formålet er å få solgt varer som er listet opp på nettsiden. 
+                        For å maksimere fortjenesten, er det lurt å utvikle nettsiden sånn at alle har tilgang til samme detaljene.
+                        Bortsett fra ekonomisk standspunkt så er det også etiske grunner for utvikling av nettsiden med tanke op universell utforming.
+                    </p>
+                    <p>
+                        Med tanke på det har jeg inkludert <code>lang</code> attributet sånn at skjermlesere vet hvilken språk inneholdet skal leses høyt på, 
+                        brukt semantiske tagger som gjør det lettere for skjermlesere å 'forstå' inneholdet som skal leses, 
+                        passert på nettsidens kontraster for lettere lesbarhet, og passert på at nettsiden kan navigeres med tab, shift+tab og arrow keys.
+                    </p>
+                </article>
+                <article>
+                    <h1>Teknisk implementasjon av sosiale medier</h1>
+                    <p>
+                        For å implementere integrasjon med sosiale medier (Facebook & Twitter), bruker jeg Open Graph.
+                    </p>
+                    <p>
+                        Open Graph er en protokoll som brukes til gjøre om nettsiden til en 
+                        <em>rich object</em> som kan integreres i sosiale grapher. 
+                        Den gjør det mulig for nettsider å bli delt med info og bildet 
+                        på f.ex. Facebook poster og meldinger, og den har nesten den samme visuelle effekten 
+                        som <code>&lt;meta name="description" content="..."&gt;</code> har på Google søk resultater.
+                    </p>
+                    <p>
+                        For å implementere Open Graph funksjonalitet, bruker vi Open Graph sin meta data.
+                        Dette legger vi som verdi på <code>&lt;meta property=""&gt;</code>.
+                        Hver Open Graph object krever minst 4 properties;
+                    </p>
+                    <ul>
+                        <li><code>og:title</code> - Artikkel tittel</li>
+                        <li><code>og:type</code> - Typen av object (f.ex. website)</li>
+                        <li><code>og:image</code> -  Bildet som skal vises</li>
+                        <li><code>og:url</code> -  Nettsidens URL</li>
+                    </ul>
+                    <p>
+                        Twitter har sine egne Meta Data for dette;
+                    </p>
+                    <ul>
+                        <li><code>twitter:card</code> - Definerer et kort</li>
+                        <li><code>twitter:title</code> - Artikkel tittel</li>
+                        <li><code>twitter:image</code> - Bildet som skal vises</li>
+                        <li><code>twitter:url</code> - Nettsidens URL</li>
+                    </ul>
+                    <p>
+                        Her er et skjermbilde av implementasjonen for denne nettsiden (plan.html) 
+                        da jeg har ikke implementert det for andre sidene.
+                    </p>
+                    <figure>
+                        <img src="img/annet/plan-opengraph.png" alt="Open Graph implementasjon eksempel">
+                        <figcaption>Facebook og Twitter Open Graph Meta Data</figcaption>
+                    </figure>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <section>
+                <h1>Contact:</h1>
+                <address>
+                    <ul>
+                        <li>Kundeservice tlfnr: 88 88 88 88</li>
+                        <li>Kundeservice åpningstider:</li>
+                        <li>Postadresse: Adressevei 90E, 1783 Halden, Norge</li>
+                    </ul>
+                </address>
+            </section>
+            <section>
+                <h1>Socials:</h1>
+                <a id="fb-button" href="#">Facebook</a>
+                <a id="tw-button" href="#">Twitter</a>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+
+Media mappen består av firmaets logo (filnavn: StorLogo.png), forkortet "liten" versjon av logoen (Filnavn: LitenLogo.png), og logo med slogan (filnavn: LogoMedSlogan.png). 
+I tillegg består den av en mappe kalt "Tskjorte" (som klesbutikken selger), og "KontaktPersoner".
+
+=Generell informasjon=
+
+Firma navn: YouzClothing
+Slogan: Unique clothing store online
+
+
+Kontakt informasjon: 
+YouzClothes har en Facebook og Twitter konto, du kan legge til sosiale medier knappene for disse kontoene, og skrive lenken som "href='#'".
+kundeservice tlfnr: 88 88 88 88 (Dette er et "fake" tlfnr til firmaet)
+Kundeservice åpningstider: Man-Fre 10:00 - 16:30
+Postadresse: Adressevei 90E, 1783 Halden, Norge (igjen, "fake" adresse). 
+
+=kontakt personer=
+Kontakt person 1:
+Navn: Mona Mon Monaersen
+Bilde filnavn: KontaktPerson1.png
+Stilling: CEO
+TLF nr: 00 00 00 00
+Email: MonaMonMonaersen@fakeemail.no
+
+Kontakt person 2:
+Navn: Anders And Andersen
+Bilde filnavn: KontaktPerson2.png
+Stilling: Markedsfører
+Tlf nr: 00 00 00 00 
+Email: AndersAndAndersen@fakeemail.no
+
+
+Kontakt Person 3:
+Navn: Børre Børresen
+Bilde filnavn: KontaktPerson3.png
+Stilling: Markedsfører 
+Tlf nr: 00 00 00 00
+Email: BørreBørresen@fakeemail.no
+
+
+=T-skjorter informasjon=
+
+T-skjorte 1:
+Tittel på t-skjorte: CSS og Flexbox T-skjorte
+Bildefils navn: tskjorte1.png
+Pris: 199 kr
+Beskrivelse: Komfortabel og behagelig T-skjorte med trykk. Gla i grids og flexbox? Kjøp denne unike T-skjorte for å vise frem til verden hva du er god på!
+
+T-skjorte 2: 
+Tittel på t-skjorte: In the making T-skjorte
+Bildefils navn: tskjorte2.png
+Pris: 149 kr
+Beskrivelse: Komfortabel og behagelig T-skjorte med trykk. 
+
+T-skjorte 3:
+Tittel på t-skjorte: HTML, CSS & JavaScript T-skjorte
+bildefils navn: tskjorte3.png
+Pris: 249 kr
+Beskrivelse: Komfortabel og behagelig T-skjorte med trykk. 
+

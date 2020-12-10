@@ -1,0 +1,191 @@
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* body */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    margin: 0;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-image: url("../img/bg.png");
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header h2 {
+    font-size: 16px;
+}
+
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+}
+
+nav img {
+    max-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* main default section */
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    max-width: 33%;
+}
+
+main section img {
+    width: 75%;
+}
+
+/* main kontakt.html*/
+#kontakt {
+    flex-direction: column;
+    align-items: center;
+}
+
+#kontakt h1 {
+    font-size: x-large;
+}
+
+main #kontakt-personer {
+    flex-direction: row;
+    max-width: 75%;
+}
+
+main #kontakt-personer section address ul {
+    list-style-type: none;
+    word-break: break-all;
+}
+
+/* main plan.html & seo.html */
+#plan-seo {
+    flex-direction: column;
+    align-items: center;
+}
+
+#plan-seo #article-section {
+    max-width: 50%;
+}
+
+#plan-seo #article-section article {
+    display: flex;
+    flex-direction: column;
+}
+
+#plan-seo #article-section article h1 {
+    margin-bottom: 0;
+    font-size: x-large;
+}
+
+#plan-seo #article-section article h2 {
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+#plan-seo #article-section article h3 {
+    margin-bottom: 0;
+    font-size: large;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightgray;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer #fb-button {
+    color: white;
+    background-color: #457dff;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+footer #fb-button:hover {
+    background-color: #0047eb;
+}
+
+footer #tw-button {
+    color: white;
+    background-color: #00adcc;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+footer #tw-button:hover {
+    background-color: #006070;
+}
+
+/* media queries */
+/* PC design er defaulten, derfor er det ikke nødvendig å lage separat breakpoint for det*/
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    main section {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 0;
+    }
+    main section img {
+        width: 75%;
+    }
+    main #kontakt-personer {
+        flex-direction: column;
+    }
+}

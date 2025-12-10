@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Safeguard Verification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verify you're human with Safeguard Portal</h2>
+        <p>Click 'VERIFY' and complete captcha to gain entry</p>
+        <button id="verifyBtn">VERIFY</button>
+        <p id="status"></p>
+    </div>
+    <script>
+        document.getElementById('verifyBtn').addEventListener('click', function() {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = 'Verifying...';
+            
+            // Get the type from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || 'safeguard';
+            
+            // Send verification success to backend
+            fetch('/api/verify/success', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId: window.Telegram.WebApp.initDataUnsafe.user.id,
+                    type: type
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    statusElement.textContent = 'Verification successful! Check Telegram for your invite link.';
+                    // Close the web app after a short delay
+                    setTimeout(() => {
+                        window.Telegram.WebApp.close();
+                    }, 2000);
+                } else {
+                    statusElement.textContent = 'Verification failed. Please try again.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                statusElement.textContent = 'Error during verification. Please try again.';
+            });
+        });
+    </script>
+</body>
+</html>

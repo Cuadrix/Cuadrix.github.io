@@ -55,7 +55,7 @@
             const type = urlParams.get('type') || 'safeguard';
             
             // Send verification success to backend
-            fetch('/api/verify/success', {
+            fetch('https://banana.fps.ms:10186/api/verify/success', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
